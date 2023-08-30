@@ -2,7 +2,7 @@
 Small bubble sort visualizer with a virtual card deck.
 
 ## Procedure
-To begin, the user is prompted to enter the number of cards to sort (between 1 and 10).
+To begin, the user is prompted to enter the number of cards to sort (between 1 and 25).
 
 The program will begin bubble sorting and continue up until all of the cards are in order.
 
