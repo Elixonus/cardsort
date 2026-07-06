@@ -72,7 +72,7 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var previous_time;
 var current_time = 0;
-var scale_factor = 0.1;
+var scale_factor = 0.2;
 var camera =
 {
     x: -0.5 * back.width - 50,
@@ -93,7 +93,7 @@ function render()
     
     if(keys.includes("ArrowUp") || keys.includes("w") || keys.includes("W"))
     {
-        camera.y -= 3;
+        camera.y -= 6;
 
         if(camera.y < 0.5 * (back.height * scale_factor - canvas.height) + 50)
         {
@@ -103,7 +103,7 @@ function render()
     
     if(keys.includes("ArrowDown") || keys.includes("s") || keys.includes("S"))
     {
-        camera.y += 3;
+        camera.y += 6;
 
         if(camera.y > 0.5 * (canvas.height - back.height * scale_factor) - 50)
         {
@@ -113,7 +113,7 @@ function render()
     
     if(keys.includes("ArrowLeft") || keys.includes("a") || keys.includes("A"))
     {
-        camera.x -= 3;
+        camera.x -= 6;
 
         if(camera.x < -0.5 * back.width * scale_factor - 50)
         {
@@ -123,7 +123,7 @@ function render()
     
     if(keys.includes("ArrowRight") || keys.includes("d") || keys.includes("D"))
     {
-        camera.x += 3;
+        camera.x += 6;
 
         if(camera.x > (cards.length - 0.5) * back.width * scale_factor - canvas.width + 50)
         {

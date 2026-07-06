@@ -8,15 +8,15 @@
     </head>
     
     <body onresize="resize();">
-        <canvas id="canvas" width="500" height="500"></canvas>
+        <canvas id="canvas" width="1000" height="1000"></canvas>
         <div id="images"></div>
         
         <style>
             
             body
             {
-                background-image: url("./background.png");
-                background-size: 50px;
+                background-image: url("./background.jpg");
+                background-size: 300px;
                 overflow: hidden;
                 margin: 0;
                 padding: 0;
@@ -29,6 +29,8 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: #000000;
+                border: 3px solid #222222;
+                box-shadow: 0 0 50px #000000;
             }
             
             #images
