@@ -117,7 +117,14 @@ function render()
 
         if(camera.x < -0.5 * back.width * scale_factor - 50)
         {
-            camera.x = -0.5 * back.width * scale_factor - 50;
+            if(camera.x > -0.5 * back.width * scale_factor - 50)
+            {
+                camera.x = -0.5 * back.width * scale_factor - 50;
+            }
+            else
+            {
+                camera.x = 0.8 * camera.x + 0.2 * (-0.5 * back.width * scale_factor - 50);
+            }
         }
     }
     
@@ -127,7 +134,14 @@ function render()
 
         if(camera.x > (cards.length - 0.5) * back.width * scale_factor - canvas.width + 50)
         {
-            camera.x = (cards.length - 0.5) * back.width * scale_factor - canvas.width + 50;
+            if(camera.x < (cards.length - 0.5) * back.width * scale_factor - canvas.width + 50)
+            {
+                camera.x = (cards.length - 0.5) * back.width * scale_factor - canvas.width + 50;
+            }
+            else
+            {
+                camera.x = 0.8 * camera.x + 0.2 * ((cards.length - 0.5) * back.width * scale_factor - canvas.width + 50);
+            }
         }
     }
     
